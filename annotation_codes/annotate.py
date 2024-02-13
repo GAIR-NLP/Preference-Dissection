@@ -13,8 +13,8 @@ from utils import *
 ###################################
 # Your OpenAI configuration here
 ###################################
-openai.api_base = "https://lonlie.plus7.plus/v1"
-openai_api_key = "sk-w00Jrh7xFC3o10vXC4Df2961Ca3d4c25B34fE6Fb60Fd8704"
+openai.api_base = "xxxxx"
+openai_api_key = "xxxxx"
 
 
 openai_model = 'gpt-4-1106-preview'

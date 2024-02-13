@@ -5,7 +5,6 @@ import os
 import math
 import json
 import numpy as np
-import pandas as pd
 import yaml
 
 feature_name_to_id = {'harmlessness': 0, 'grammar, spelling, punctuation, and code-switching': 1, 'friendly': 2,
@@ -253,11 +252,6 @@ def get_score(str):
     return 0
 
 
-def read_parquet(parquet_file_path):
-    data = pd.read_parquet(parquet_file_path)
-    data = data.to_dict("records")
-    return data
-
 
 def write_jsonl(data, jsonl_file_path, mode="w"):
     # data is a list, each of the item is json-serilizable
@@ -306,8 +300,6 @@ def read_all(file_path):
         return read_jsonl(file_path)
     elif file_path.endswith(".json"):
         return read_json(file_path)
-    elif file_path.endswith(".parquet"):
-        return read_parquet(file_path)
     elif file_path.endswith(".txt"):
         with open(file_path, "r") as f:
             return [line.strip() for line in f.readlines() if line.strip() != ""]
