@@ -11,6 +11,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 [//]: # ([**Limitations**]&#40;https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#limitations&#41; |)
 [//]: # (|[**Featured By AK**]&#40;https://twitter.com/_akhaliq/status/1740571256234057798&#41; )
 
+![](./assets/main_vis.PNG)
 
 ## News
 
@@ -105,6 +106,8 @@ If you find this project useful or use any of the released resources, please kin
 }
 ```
 
+## Acknowledgement
+We thank Yuan Guo, Yiheng Xu, Yuqing Yang, Zhoujun Cheng, Zhihui Xie for their valuable feedback and suggestions.
 
 
 
