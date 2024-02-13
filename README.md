@@ -44,7 +44,7 @@ We provide an [interactive demo](https://huggingface.co/spaces/GAIR/Preference-D
 - **Sample-level SHAP Analysis**: applies shapley value to show how the difference of properties in a pair of responses affect the final preference.
 - **Add a New Model for Preference Dissection**: update the preference labels from a new LLM and visualize the results
 
-You can also find the codes of all the analysis in `app.py` in the `Files` tab of the demo.
+You can also find the codes of all the analysis in `app.py` in the `Files` tab ([link](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization/tree/main)) of the demo.
 
 
 ### The Annotated Dataset
