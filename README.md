@@ -107,7 +107,7 @@ If you find this project useful or use any of the released resources, please kin
 ```
 
 ## Acknowledgement
-We thank Yuan Guo, Yiheng Xu, Yuqing Yang, Zhoujun Cheng, Zhihui Xie for their valuable feedback and suggestions.
+We thank Yuan Guo, Yiheng Xu, Yuqing Yang, Zhoujun Cheng, Zhihui Xie for their valuable feedback and suggestions! 🤗🤗🤗
 
 
 
