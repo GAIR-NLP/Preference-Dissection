@@ -25,7 +25,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 
 In this project, we conduct a thorough analysis of human and LLM preferences. Our analysis is based on user-model conversations collected from various real-world scenarios, and we dissect both human preferences and LLM preferences from 32 different models. 
 
-Here are some key findings:
+**Here are some key findings:**
 
 - Humans are less sensitive to errors, clearly dislike a model when it admits its limits, and prefer a response that supports their stances.
 - Advanced LLMs like GPT-4-Turbo prefer correctness, clarity, and harmlessness more.
