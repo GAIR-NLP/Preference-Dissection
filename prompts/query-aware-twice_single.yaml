@@ -1,0 +1,26 @@
+# this is to process a part of the characteristics
+needed_keys:
+  - prompt
+  - response
+  - questions_str
+  - output_format_str
+template: |-
+  You will need to analyze a response from an AI assistant to a user's query. The query and the response are as follows:
+  
+  [Query Start]
+  {prompt}
+  [Query End]
+  
+  [Response Start]
+  {response}
+  [Response End]
+  
+  You need answer the following questions:
+  
+  [Question Start]
+  {questions_str}
+  [Question End]
+  
+  Your output should be in a json format like this:
+  
+  {output_format_str}

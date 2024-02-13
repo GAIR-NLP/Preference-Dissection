@@ -1,0 +1,4 @@
+openai==0.28.0
+tiktoken==0.4.0
+PyYAML==6.0
+pyyaml-include==1.3.1

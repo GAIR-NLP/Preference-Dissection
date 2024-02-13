@@ -1,0 +1,6 @@
+innovative and novel:
+  content: The response is innovative and novel in addressing the user's query by not just providing run-of-the-mill contents, but one that reflects a novel perspective, perhaps introducing unique ideas or solutions not commonly thought of.
+
+relevance without considering inaccuracy:
+  content: When not considering the inaccuracies in the response, it should be relevant to the query and contain no irrelevant information that is not related to the user's query, therefore the standard of "relevant" is very loose. We set 4 levels - When not considering the inaccuracy, the response satisfies 3) all contents are relevant / 2) the majority of contents are relevant, but a minor part of contents are irrelevant / 1) the majority of contents are irrelevant, but a minor part of contents are relevant / 0) all contents are irrelevant. Once again, please do not consider the inaccuracy when rating this characteristic.
+

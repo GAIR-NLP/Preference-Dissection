@@ -1,0 +1,37 @@
+# this is to process a part of the characteristics
+needed_keys:
+  - prompt
+  - response_1
+  - response_2
+
+template: |-
+  You will need to analyze two responses from AI assistants to a user's query. The responses are as follows:
+  
+  [Response 1 Start]
+  {response_1}
+  [Response 1 End]
+  
+  [Response 2 Start]
+  {response_2}
+  [Response 2 End]
+  
+  And you are also given a set of characteristics with their name and description:
+  
+  [Characteristics Start]
+  {characteristics}
+  [Characteristics End]
+  
+  Your task is to assign a rating to each characteristic to show how the response matches the characteristic, based on the provided descriptions. The rating criteria are as follows:
+  
+    - 0: The response does not match the characteristic at all.
+    - 1: The response matches the characteristic to some extent.
+    - 2: The response matches the characteristic quite well.
+    - 3: The response matches the characteristic perfectly.
+  
+  Please follow the characteristics and the rating criteria strictly. Your findings should be formatted in JSON, specifying the characteristic in question and the rating:
+  
+  {
+    "characteristic name 1": {"response 1": "0/1/2/3", "response 2": "0/1/2/3"},
+    ...
+    "characteristic name n": {"response 1": "0/1/2/3", "response 2": "0/1/2/3"},
+  }

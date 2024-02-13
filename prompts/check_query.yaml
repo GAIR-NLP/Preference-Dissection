@@ -1,0 +1,41 @@
+### This is the template for GPT-4 to annotate a pair of responses given a user's query
+needed_keys:
+  - prompt
+template: |-
+  You will need to analyze a user's query that is submitted to an AI assistant. The query is as follows:
+
+  [Query Start]
+  {prompt}
+  [Query End]
+  
+  Q1. Does the user clearly express his/her intent in the query (like raising an unambiguous question or asking the AI assistant to do a certain thing like explain a piece of code)? If yes, output "Yes". If no, output "No".
+  
+  Q2. Does the user clearly and explicitly express his/her feelings or emotions in the query? If yes, output "Yes". If no, output "No".
+  
+  Q3. Do any clear and explicit constraints specified by the user exist in the query? Explicit constraints include specific word/phrase use (like use word starts with 'A', must contain a certain phrase in output, or do not use a certain word), response length limit (like more than 100 words or less than 20 words), writing style (like in an Shakespeare style or in first person), output format (like json, list, table), number of output items (like write the names of 4 fruits), output items with a certain feature (like a list of games similar to Super Mario), etc. If yes, output answer by listing all of them in a list. If no, output an empty list ([]) for the "explicit constraints" field.
+  
+  Q4. Does the user clearly and explicitly show any specific subjective stance, bias, preference, opinion, personal belief, or value (e.g. the support/opposition to a certain viewpoint)? If yes, output answer by listing all of them in a list. If no, output an empty list ([]) for the "subjective stance" field.
+
+  Q5. Does the user clearly and explicitly show any specific mistakes or unfounded, inappropriate or controversial bias, stance or belief in the query? If yes, output answer by listing all of them in a list. If no, output an empty list ([]) for the "mistakes or biases" field.
+  
+  The output should be in a json format like this:
+  
+  {
+      "clear intent": "Yes/No",
+      "explicitly express feelings": "Yes/No",
+      "explicit constraints": [
+          "a brief description of the explicit constraint",
+          ...
+          "a brief description of the explicit constraint"
+      ],
+      "explicit subjective stances": [
+          "a brief description of the explicit subjective stance",
+          ...
+          "a brief description of the explicit subjective stance"
+      ],
+      "explicit mistakes or biases": [
+          "a brief description of the explicit mistake or bias",
+          ...
+          "a brief description of the explicit mistake or bias"
+      ]
+  }

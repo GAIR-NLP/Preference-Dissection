@@ -1,0 +1,82 @@
+### This is the template for GPT-4 to annotate a pair of responses given a user's query
+needed_keys:
+  - prompt
+  - response_1
+  - response_2
+  - reference
+template: |-
+  You will need to analyze two responses from AI assistant to a user's query. The query and the response are as follows:
+
+  [Query Start]
+  {prompt}
+  [Query End]
+
+  [Response 1 Start]
+  {response_1}
+  [Response 1 End]
+  
+  [Response 2 Start]
+  {response_2}
+  [Response 2 End]
+  
+  Your task is to help me check the accuracy of the responses. The types of accuracy issues are as follows, please ignore all other kinds of issues like small grammar errors, spelling errors, etc:
+    
+    1. Factual error: Some information in the response is factually wrong, like the response says "The sun orbits the earth" without extra context or "the print() function in python is to accept user's input".
+    2. Information contradiction to the query: Some information in the response contradicts the query (regardless of whether the information in query is accurate or not), like the query says "Alice is 7 years old" but the response says "Alice is 8 years old".
+    3. Math operation error: The response contains some incorrect math operations, like the response says "2 + 2 = 5" or "13 * 7 = 100".
+    4. Code generation error: The response write or generate some wrong codes with errors such as syntax errors, logical errors, runtime errors, etc.
+  
+  Here is also a reference response to help you check the accuracy of the responses:
+  
+  [Reference Start]
+  {reference}
+  [Reference End]
+  
+  You should first check if your knowledge and capability is sufficient to reliably check the accuracy of the responses with regard to the above inaccuracy types (e.g. need knowledge that are beyond your training data or the results need external tools like web search to check). If yes, fill the "accuracy check" field with "applicable", otherwise fill it with "not applicable".
+  
+  Then you should find all the inaccuracies, provide a very brief description and output the type for each of them, and decide how serious each inaccuracy is by three levels:
+  
+    1. Minor: The inaccuracy is minor and does not affect or only slightly affect the overall correctness of the response.
+    2. Moderate: The inaccuracy is moderate and affects the overall correctness of the response.
+    3. Severe: The inaccuracy is severe and makes the response totally wrong.
+  
+  When identifying inaccuracies, avoid nitpicking over minor details. For sections that are error-free but could be more elaborately written, do not categorize them as inaccuracies. For example "Tax benefits. In many countries, corporate gifts and promotional items are tax deductible as a business expense." is accurate and you do not need to regard it as incorrect by saying "Tax benefits for corporate gifts may not be universally applicable and have specific conditions that must be met.". Also do not make basic mistakes like saying "Frankfurt Cathedral is not one of the most famous landmarks in Frankfurt.".
+  
+  If an inaccuracy is shared by both responses, you should use the same description, type and severity for both responses.
+
+  Your output should be in a json format like this, if your knowledge and capability is not sufficient to check a response ("accuracy check" field with "not applicable") or no inaccuracy is found, just output an empty list ([]) for the "inaccuracies" field:
+  
+  {
+    "Response 1": {
+      "accuracy check": "applicable/not applicable",
+      "inaccuracies": [
+        {
+          "brief description": "a very brief description of the inaccuracy",
+          "type": "inaccuracy type",
+          "severity": "minor/moderate/severe"
+        },
+        ...
+        {
+          "brief description": "a very brief description of the inaccuracy",
+          "type": "inaccuracy type",
+          "severity": "minor/moderate/severe"
+        }
+      ]
+    },
+    "Response 2": {
+      "accuracy check": "applicable/not applicable",
+      "inaccuracies": [
+        {
+          "brief description": "a very brief description of the inaccuracy",
+          "type": "inaccuracy type",
+          "severity": "minor/moderate/severe"
+        },
+        ...
+        {
+          "brief description": "a very brief description of the inaccuracy",
+          "type": "inaccuracy type",
+          "severity": "minor/moderate/severe"
+        }
+      ]
+    }
+  }

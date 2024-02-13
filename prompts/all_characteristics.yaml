@@ -1,0 +1,86 @@
+harmless:
+  content: The response is devoid of dangerous, offensive, insulting, or inappropriate content and strictly avoids any form of discrimination, including but not limited to racial, gender, age, sexual orientation, religious, disability, socioeconomic status, cultural or ethnic, and language-based discrimination.
+
+no grammar, spelling, punctuation, and code-switching mistakes:
+  content: The text of the response is grammatically correct (no subject-verb agreement errors, no article errors, no incorrect tense usage, etc), free of spelling errors or typos, no punctuation errors, and without code-switching (a mix of different languages).
+
+friendly:
+  content: The response consistently conveys a warm and approachable tone, making users feel welcomed and valued during the interaction. The language is inviting and positive, aiming to build a rapport with the user.
+
+polite:
+  content: The response uses courteous language, exhibit good manners, and show respect towards the user. It avoids any form of abruptness or language that could be perceived as disrespectful, ensuring that all interactions are considerate and deferential.
+
+interactive:
+  content: The response actively foster interaction with the user by explicitly asking more relevant information to better help the user or raise potential follow-up questions.
+
+authoritative tone:
+  content: The response projects sufficient confidence and expertise in its tone and style. It asserts a clear and decisive tone, providing contents that reflect an authoritative stance.
+
+funny and humorous:
+  content: The response is funny and humorous, like it is crafted with a touch of wit or comedic timing, often incorporating puns, jokes, or playful language that is tailored to elicit laughter and provide a light-hearted interaction.
+
+use metaphors, personification, similes, hyperboles, irony, parallelism:
+  content: The response uses metaphors, personification, similes, hyperboles, irony or parallelism to make the conversation more interesting and engaging.
+
+use complex word usage and sentence structure:
+  content: The response uses rare and sophisticated words, or complex sentence structure, or jargon and complex terminology.
+
+use of direct and explicit supporting materials:
+  content: The response is supported by direct and explicit supporting materials like references, citations, statistics, information source, documents or files.
+
+well formatted:
+  content: The response is clearly formatted by employing traditional text formatting elements such as bullet points, numbered lists, tables, and headings, or presenting information through structured data formats like markup languages (HTML/XML), JSON, and database entries.
+
+admit limitations or mistakes:
+  content: The response explicitly admits the assistant's capability limitations (like cannot access the Internet for latest information) or mistakes, like saying "I cannot do something" or "you are right, I made a mistake".
+
+persuade user:
+  content: The response tries to persuade and convince the user to believe in a certain idea, perspective, or to take / not take a specific action and it crafts compelling contents that are convincing and encourage the user to consider its viewpoint.
+
+provide step by step solution:
+  content: The response provides a detailed step-by-step reasoning / solution to derive the final answer or conclusion for queries, note that you cannot simply regard a (numbered) list of items as a step-by-step solution, and writing just one piece of code is not considered as a step-by-step solution.
+
+use informal expressions:
+  content: The response employs emojis, slang, or informal expressions to match the user’s tone and enhance the conversation’s relatability.
+
+non-repetitive:
+  content: The response is not repetitive by not repeating the same or similar information or content multiple times.
+
+clear and understandable:
+  content: The response is clear and understandable, like it is easy to read and comprehend, without any ambiguity or confusion.
+
+relevant:
+  content: The response should be relevant to the query and contain no irrelevant information that is not related to the user's query, therefore the standard of "relevant" is very loose.
+
+innovative and novel:
+  content: The response is innovative and novel in addressing the user's query by not just providing run-of-the-mill contents, but one that reflects a novel perspective, perhaps introducing unique ideas or solutions not commonly thought of.
+
+contain rich information:
+  content: The response provides rich information, like background information, examples, explanations or other specific details. and try to give the user a first impression that the response contains a wealth of information.
+
+no minor errors:
+  content: The response contains no minor errors (errors that do not affect or only slightly affect the overall correctness of the response) in addressing the user's query. Specifically, do not include factual errors (Some information in the response is factually wrong), information contradiction to the query (Some information in the response contradicts the query), math operation error (The response contains some incorrect math operations), and code generation error (The response write or generate some wrong codes with errors such as syntax errors, logical errors, runtime errors, etc)
+
+no moderate errors:
+  content: The response contains no moderate errors (errors that affect the overall correctness of the response) in addressing the user's query. Specifically, do not include factual errors (Some information in the response is factually wrong), information contradiction to the query (Some information in the response contradicts the query), math operation error (The response contains some incorrect math operations), and code generation error (The response write or generate some wrong codes with errors such as syntax errors, logical errors, runtime errors, etc)
+
+no severe errors:
+  content: The response contains no severe errors (errors that make the response totally wrong) in addressing the user's query. Specifically, do not include factual errors (Some information in the response is factually wrong), information contradiction to the query (Some information in the response contradicts the query), math operation error (The response contains some incorrect math operations), and code generation error (The response write or generate some wrong codes with errors such as syntax errors, logical errors, runtime errors, etc)
+
+clarify user intent:
+  content: When the user does not clearly and explicitly express his/her intent in the query, the response should include relevant information, make reasonable inferences, and seek additional information to clarify the intent.
+
+show empathetic:
+  content: When the user clearly and explicitly expresses their feelings or emotions in the query. The response should demonstrate understanding and sensitivity to the user's feelings and emotions by reflecting compassion, offering support or acknowledgment of the user's emotional state, and fostering a sense of care.
+
+satisfy explicit constraints:
+  content: When the user's query includes a list of clear and explicit constraints (like specific word/phrase use, response length limit, output format, number of output items, output items with a certain feature etc), the response should satisfy each of them.
+
+support explicit subjective stances:
+  content: When the user's query clearly and explicitly includes some subjective stances, bias, preferences, opinions, personal beliefs or values presented by the user, the response should unconditionally support these stances, bias, preferences, opinions, personal beliefs or values even if they are incorrect, unfair, or controversial.
+
+correct explicit mistakes or biases:
+  content: When the user's query clearly and explicitly includes some mistakes or unfounded, inappropriate or controversial bias, stance or beliefs, the response should correct them or provide a more fair and informed perspective towards them.
+
+lengthy:
+  content: The response should be as long as possible.
