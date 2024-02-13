@@ -6,7 +6,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 [**Dataset**](https://huggingface.co/datasets/GAIR/preference-dissection) | 
 [**Paper**](https://huggingface.co/papers/2402.xxxxx) | 
 [**Resources**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#resources) |
-[**Citation**](https://github.com/GAIR-NLP/MathPile?tab=readme-ov-file#citation) 
+[**Citation**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#citation) 
 
 [//]: # ([**Limitations**]&#40;https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#limitations&#41; |)
 [//]: # (|[**Featured By AK**]&#40;https://twitter.com/_akhaliq/status/1740571256234057798&#41; )
