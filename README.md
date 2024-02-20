@@ -4,7 +4,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 
 [**Interactive Demo**](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization) |
 [**Dataset**](https://huggingface.co/datasets/GAIR/preference-dissection) | 
-[**Paper**](https://huggingface.co/papers/2402.xxxxx) | 
+[**Paper**](https://arxiv.org/abs/2402.11296) | 
 [**Resources**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#resources) |
 [**Citation**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#citation) 
 
@@ -19,7 +19,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 [//]: # (- [2024/01/06] We released a new version &#40;`v0.2`, a cleaner version&#41; of MathPile. See our [HF dataset homepage]&#40;https://huggingface.co/datasets/GAIR/MathPile&#41; for more details.)
 [//]: # (- [2023/12/30] MathPile was featured on the Hugging Face Datasets trending list. [[snapshot]]&#40;./static/images/hf-dataset-trending.png&#41;)
 [//]: # (- [2023/12/29] We released the [MathPile]&#40;https://huggingface.co/datasets/GAIR/MathPile&#41;, a 9.5B high-quality and diverse math-centric pre-training corpus.)
-- [2024/02/14] We released the paper, code, dataset and an interactive demo for this project.
+- [2024/02/20] We released the paper, code, dataset and an interactive demo for this project.
 
 
 ## Introduction
@@ -101,7 +101,7 @@ If you find this project useful or use any of the released resources, please kin
 @article{li2024dissecting,
   title={Dissecting Human and LLM Preferences},
   author={Li, Junlong and Zhou, Fan and Sun, Shichao and Zhang, Yikai and Zhao, Hai and Liu, Pengfei},
-  journal={arXiv preprint arXiv:2402.xxxxx},
+  journal={arXiv preprint arXiv:2402.11296},
   year={2024}
 }
 ```
