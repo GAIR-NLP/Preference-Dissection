@@ -5,6 +5,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 [**Interactive Demo**](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization) |
 [**Dataset**](https://huggingface.co/datasets/GAIR/preference-dissection) | 
 [**Paper**](https://arxiv.org/abs/2402.11296) | 
+[**Visualization**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#visualization) |
 [**Resources**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#resources) |
 [**Citation**](https://github.com/GAIR-NLP/Preference-Dissection?tab=readme-ov-file#citation) 
 
@@ -33,20 +34,74 @@ In this project, we conduct a thorough analysis of human and LLM preferences. Ou
 - LLMs of similar sizes exhibit similar preferences irrespective of training methods, and the preference of a pretrained-only LLM is largely unchanged after alignment.
 - Benchmarks with LLM-as-a-judge are easy to manipulate. Experiments on AlpacaEval 2.0 and MT-Bench show that aligning models with the judges' preferences increases scores, whereas diverge from these preferences leads to lower scores.
 
+## Visualization
 
-## Resources
+### Run Locally
+You can run the visualization codes locally by following the steps below:
 
-We release a bunch of resources for this project:
-
-### Interactive Demo
-We provide an [interactive demo](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization) in Huggingface Spaces. You can play with the demo to see 
+First enter the visualization directory:
+```angular2html
+cd ./visualization
+```
+Install the required packages:
+```angular2html
+pip install -r requirements.txt
+```
+Then
+```angular2html
+streamlit run app.py
+```
+The following visualizations are provided:
 - **Complete Preference Dissection in Paper**: shows how the difference of properties in a pair of responses can influence different LLMs'(human included) preference.
 - **Preference Similarity Matrix**: shows the preference similarity among different judges.
 - **Sample-level SHAP Analysis**: applies shapley value to show how the difference of properties in a pair of responses affect the final preference.
-- **Add a New Model for Preference Dissection**: update the preference labels from a new LLM and visualize the results
 
-You can also find the codes of all the analysis in `app.py` in the `Files` tab ([link](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization/tree/main)) of the demo.
+----
 
+You can also add a new model to obtain its preference labels and the dissection. Please follow the steps in below:
+
+**Step 1: Inference**
+```angular2html
+python add_new_model_p1_inference.py \
+--model_name "your_model_name" \
+--model_path "/path/to/model" \
+--model_size 6.5 # the size of your model, in billion parameters (B)
+```
+
+Then run again with the order of two response interchanged (by setting `--change_AB`):
+```angular2html
+python add_new_model_p1_inference.py \
+--model_name "your_model_name" \
+--model_path "/path/to/model" \
+--model_size 6.5 # the size of your model, in billion parameters (B)
+--change_AB
+```
+
+**Step 2: Collect Preference Labels**
+```angular2html
+python add_new_model_p2_collection.py \
+--model_name "your_model_name" \
+--model_size 6.5 # same as above
+```
+
+**Step 3: Bayesian Logistic Regression**
+
+You may wait for a little while for fitting the Bayesian Logistic models.
+```angular2html
+python add_new_model_p3_bayeslr.py \
+--model_name "your_model_name" \
+--model_size 6.5 # same as above
+```
+
+Once the above steps are done, you can rerun the visualization codes to see the new model's preference labels and the dissection.
+
+
+### Online Interactive Demo
+We also provide an online [interactive demo](https://huggingface.co/spaces/GAIR/Preference-Dissection-Visualization) in Huggingface Spaces, which you can directly play with.
+
+## Resources
+
+We release a bunch of collected resources for this project:
 
 ### The Annotated Dataset
 We provide [the annotated dataset](https://huggingface.co/datasets/GAIR/preference-dissection) used in this project. The dataset is based on [lmsys/chatbot_arena_conversations](https://huggingface.co/datasets/lmsys/chatbot_arena_conversations), and contains how each response satisfies the 29 pre-defined properties. Please see more details in the dataset page.

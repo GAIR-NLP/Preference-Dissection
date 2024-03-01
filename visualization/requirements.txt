@@ -1,0 +1,13 @@
+matplotlib==3.7.2
+numpy==1.26.2
+pandas==2.0.3
+scipy==1.11.1
+seaborn==0.12.2
+shap==0.44.1
+streamlit==1.30.0
+jax==0.4.20
+jaxlib==0.4.20
+numpyro==0.13.2
+vllm==0.3.2
+torch==2.1.2
+torchvision==0.16.2
