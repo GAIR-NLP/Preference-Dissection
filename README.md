@@ -20,6 +20,7 @@ This is the official repository for [Dissecting Human and LLM Preferencces](http
 [//]: # (- [2024/01/06] We released a new version &#40;`v0.2`, a cleaner version&#41; of MathPile. See our [HF dataset homepage]&#40;https://huggingface.co/datasets/GAIR/MathPile&#41; for more details.)
 [//]: # (- [2023/12/30] MathPile was featured on the Hugging Face Datasets trending list. [[snapshot]]&#40;./static/images/hf-dataset-trending.png&#41;)
 [//]: # (- [2023/12/29] We released the [MathPile]&#40;https://huggingface.co/datasets/GAIR/MathPile&#41;, a 9.5B high-quality and diverse math-centric pre-training corpus.)
+- [2024/05/15] Our paper has been accepted by ACL 2024! 🎉
 - [2024/02/20] We released the paper, code, dataset and an interactive demo for this project.
 
 
